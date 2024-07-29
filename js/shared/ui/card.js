@@ -3,8 +3,8 @@ import { getSingleProduct } from "../../script.js";
 
 export const card = (index, product) => {
   return `
-            <div onclick='getSingleProduct(${product.id})' key=${index} class="lg:h-[75vh] h-[50vh] w-full  flex justify-center items-center cursor-pointer">
-                <div class="w-[100%] h-[100%] bg-white shadow-custom rounded">
+            <div onclick='getSingleProduct(${product.id})' key=${index} class="lg:h-[75vh] h-[50vh] w-full   flex justify-center items-center cursor-pointer">
+                <div class="w-[100%] h-[100%] bg-white shadow-custom rounded p-2">
                   <div class="lg:h-80 h-[55%] w-full  ">
                     <img
                       src=${product.images[0]}
