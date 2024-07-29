@@ -8,7 +8,6 @@ import { cart } from "./domElements.js";
 
 export const displayItems = () => {
   const items = getCartItems();
-  console.log(items);
   cart.innerHTML = "";
   items.map((item) => {
     const row = document.createElement("div");

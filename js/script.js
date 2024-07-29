@@ -77,7 +77,6 @@ export const getAllProductsAndCategories = () => {
     .then(([productsData, categoriesData]) => {
       const products = productsData.products;
       allProducts = products;
-      console.log(allProducts);
       products.map((product, index) => {
         const productCard = document.createElement("div");
         productCard.innerHTML = card(index, product);
@@ -132,3 +131,24 @@ searchInput.addEventListener("keyup", () => {
   const query = searchInput.value;
   searchProduct(query);
 });
+
+export const getSingleProduct = (productId) => {
+  handleRemoteRequest(
+    `products/${productId}`,
+    function (data) {
+      localStorage.setItem("productData", JSON.stringify(data));
+      window.open("productDetails.html", "_blank");
+    },
+    function (error) {
+      console.log(error);
+    },
+    function () {
+      console.log("start");
+    },
+    function () {
+      console.log("end");
+    }
+  );
+};
+
+window.getSingleProduct = getSingleProduct;

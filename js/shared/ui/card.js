@@ -1,8 +1,9 @@
 import { addToCart } from "../cart.js";
+import { getSingleProduct } from "../../script.js";
 
 export const card = (index, product) => {
   return `
-            <div key=${index} class="lg:h-[75vh] h-[50vh] w-full  flex justify-center items-center ">
+            <div onclick='getSingleProduct(${product.id})' key=${index} class="lg:h-[75vh] h-[50vh] w-full  flex justify-center items-center cursor-pointer">
                 <div class="w-[100%] h-[100%] bg-white shadow-custom rounded">
                   <div class="lg:h-80 h-[55%] w-full  ">
                     <img
@@ -21,8 +22,8 @@ export const card = (index, product) => {
                     <div
                       class="lg:text-xs text-[8px] self-start flex gap-1 justify-center items-center"
                     >
-                      <i class="fa-solid fa-star text-yellow-600"></i>
-                      <p class="text-rose-500 p-1 bg-rose-500/10 font-bold">
+                      <i class="fa-solid fa-star text-yellow-500"></i>
+                      <p class="text-rose-500 p-1 bg-rose-500/10 font-bold rounded-sm">
                         ${product.rating}
                       </p>
                     </div>

@@ -7,3 +7,4 @@ export const sideMenu = document.querySelector(".side-menu ");
 export const searchInput = document.querySelector(".search");
 export const cart = document.getElementById("cart");
 export const quantity = document.getElementById("quantity");
+export const productDetails = document.getElementById("product-details");
